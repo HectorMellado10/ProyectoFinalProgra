@@ -56,10 +56,10 @@ Respond to Webhook
 
 Devuelve una respuesta al cliente confirmando la ejecución.
 
-📸 (Agrega aquí una captura del flujo completo de nodos en n8n como evidencia del diseño final.)
+(Agrega aquí una captura del flujo completo de nodos en n8n como evidencia del diseño final.)
 
 4. Problemas encontrados
-🧩 Problema 1: Google Calendar no aceptaba los datos
+ Problema 1: Google Calendar no aceptaba los datos
 
 Al intentar usar el nodo "Create an Event (Google Calendar)", no se creaba ningún evento.
 
@@ -70,7 +70,7 @@ Se intentó convertir los datos con new Date().toISOString(), pero no se resolv�
 Solución:
 Se decidió desechar temporalmente el uso de Calendar y usar Gmail como canal alternativo.
 
-🧩 Problema 2: Los campos aparecían vacíos en el correo
+ Problema 2: Los campos aparecían vacíos en el correo
 
 A pesar de que la app enviaba campos (title, description, etc.), el correo mostraba contenido como:
 
@@ -99,7 +99,7 @@ Expression expected
 Solución:
 Se corrigieron los campos usando la sintaxis adecuada de n8n, validando que las variables existieran antes de usarlas para evitar errores de interpretación.
 
-🧩 Problema 4: Error de incompatibilidad por usar una API de Android antigua
+ Problema 4: Error de incompatibilidad por usar una API de Android antigua
 
 Durante las pruebas iniciales, la aplicación fue desarrollada sobre la API 24 (Android 7.0).
 Al enviarse los datos desde la app al webhook, el entorno de n8n en Railway comenzó a devolver errores silenciosos o desconexiones sin respuesta clara.
